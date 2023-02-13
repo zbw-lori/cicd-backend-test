@@ -10,7 +10,7 @@ on:
     branches: [ "main" ]
 
 env:
-  PATH: "cicd-backend-test"
+  LORI_PATH: "cicd-backend-test"
 
 jobs:
   build:
@@ -24,10 +24,10 @@ jobs:
       with:
         dotnet-version: 7.0.x
     - name: Restore dependencies
-      run: dotnet restore $PATH
+      run: dotnet restore $LORI_PATH
     - name: Build
-      run: dotnet build --no-restore --project $PATH
+      run: dotnet build --no-restore --project $LORI_PATH
     - name: Run
-      run: dotnet run --project $PATH
+      run: dotnet run --project $LORI_PATH
     - name: Test
-      run: dotnet test --no-build --verbosity normal --project $PATH
+      run: dotnet test --no-build --verbosity normal --project $LORI_PATH
