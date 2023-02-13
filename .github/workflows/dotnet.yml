@@ -23,6 +23,8 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 7.0.x
+    - name: check dir
+      run: ls -l
     - name: Restore dependencies
       run: dotnet restore $LORI_PATH
     - name: Build
