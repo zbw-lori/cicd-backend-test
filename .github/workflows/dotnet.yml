@@ -28,8 +28,8 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore $LORI_PATH
     - name: Build
-      run: dotnet build --no-restore --project $LORI_PATH
+      run: dotnet build --no-restore $LORI_PATH
     - name: Run
-      run: dotnet run --project $LORI_PATH
+      run: dotnet run $LORI_PATH
     - name: Test
-      run: dotnet test --no-build --verbosity normal --project $LORI_PATH
+      run: dotnet test --no-build --verbosity normal $LORI_PATH
