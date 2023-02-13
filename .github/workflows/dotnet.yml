@@ -26,8 +26,8 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore $PATH
     - name: Build
-      run: dotnet build --no-restore $PATH
+      run: dotnet build --no-restore --project $PATH
     - name: Run
-      run: dotnet run $PATH
+      run: dotnet run --project $PATH
     - name: Test
-      run: dotnet test --no-build --verbosity normal $PATH
+      run: dotnet test --no-build --verbosity normal --project $PATH
