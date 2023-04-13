@@ -6,6 +6,9 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+env:
+    TAG: lori-backend:0.0.1-rc.1
+
 jobs:
     docker:
       permissions:
@@ -38,4 +41,4 @@ jobs:
               context: .
               platforms: linux/amd64
               push: true
-              tags: ghcr.io/${{ github.repository_owner }}/lori-backend:0.0.1-rc.1
+              tags: ghcr.io/${{ github.repository_owner }}/${{ env.TAG }}
