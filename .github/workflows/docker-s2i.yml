@@ -38,4 +38,4 @@ jobs:
               context: .
               platforms: linux/amd64
               push: true
-              tags: lori-backend:0.0.1-rc.1
+              tags: ghcr.io/zbw-lori/lori-backend:0.0.1-rc.1
