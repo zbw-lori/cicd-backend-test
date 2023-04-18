@@ -6,6 +6,8 @@ using lori.backend.Infrastructure;
 using Microsoft.OpenApi.Models;
 using Serilog;
 
+// adding simple comment to test releasing
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
